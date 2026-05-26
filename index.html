@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Bhanu Pratap Singh - Senior EHS Executive & Govt. Registered Paramedic - Portfolio"/>
+<meta name="keywords" content="EHS, Safety, Occupational Health, Fire Safety, Emergency Response, LOTO, PTW, HAZOP"/>
+<title>Bhanu Pratap Singh | Senior EHS Executive</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+<style>
+:root {
+  --navy: #0b1c2c;
+  --navy-light: #122438;
+  --navy-mid: #0f2035;
+  --gold: #d4b24c;
+  --gold-light: #e8c96a;
+  --gold-pale: #f5e8b8;
+  --white: #ffffff;
+  --gray-light: #f4f4f4;
+  --gray-mid: #e8e8e8;
+  --gray-text: #6b7280;
+  --dark-text: #1a2332;
+  --sidebar-w: 280px;
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;max-width:100%;}
+body{font-family:'Inter',sans-serif;background:var(--gray-light);color:var(--dark-text);overflow-x:hidden;max-width:100%;}
+
+/* ===== LOADER ===== */
+#loader{position:fixed;inset:0;z-index:9999;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;}
+#loader.hide{opacity:0;pointer-events:none;}
+.loader-logo{font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:900;color:var(--white);letter-spacing:3px;}
+.loader-logo span{color:var(--gold);}
+.loader-bar{width:200px;height:3px;background:rgba(255,255,255,0.15);border-radius:2px;margin-top:20px;overflow:hidden;}
+.loader-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:2px;animation:loadFill 1.8s ease forwards;}
+@keyframes loadFill{from{width:0;}to{width:100%;}}
+
+/* ===== SIDEBAR ===== */
+#sidebar{position:fixed;left:0;top:0;bottom:0;width:var(--sidebar-w);background:var(--navy);z-index:100;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+#sidebar::-webkit-scrollbar{width:3px;}
+#sidebar::-webkit-scrollbar-track{background:transparent;}
+#sidebar::-webkit-scrollbar-thumb{background:rgba(212,178,76,0.3);border-radius:2px;}
+
+.sidebar-top{background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);padding:32px 24px 24px;display:flex;flex-direction:column;align-items:center;border-bottom:1px solid rgba(212,178,76,0.2);}
+.profile-ring{position:relative;width:110px;height:110px;margin-bottom:16px;}
+.profile-ring::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(var(--gold) 0deg,var(--gold-light) 120deg,transparent 120deg,transparent 240deg,var(--gold) 240deg);animation:spin 8s linear infinite;}
+.profile-img{position:absolute;inset:4px;border-radius:50%;background:linear-gradient(135deg,#2a3f55,var(--navy-mid));overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.profile-img img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.profile-initials{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:800;color:var(--gold);letter-spacing:2px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+.sidebar-name{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:var(--white);text-align:center;letter-spacing:1px;margin-bottom:4px;}
+.sidebar-title{font-size:0.68rem;color:var(--gold);text-align:center;letter-spacing:0.5px;line-height:1.4;font-weight:500;}
+
+.sidebar-nav{padding:20px 0;flex:1;}
+.nav-section{padding:0 8px;margin-bottom:4px;}
+.nav-link{display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:8px;color:rgba(255,255,255,0.65);font-size:0.78rem;font-weight:500;text-decoration:none;cursor:pointer;transition:var(--transition);letter-spacing:0.3px;position:relative;}
+.nav-link:hover,.nav-link.active{background:rgba(212,178,76,0.12);color:var(--gold);}
+.nav-link::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:0;background:var(--gold);border-radius:0 2px 2px 0;transition:height 0.3s ease;}
+.nav-link.active::before{height:60%;}
+.nav-link i{width:16px;text-align:center;font-size:0.75rem;}
+
+.sidebar-info{padding:20px 24px;border-top:1px solid rgba(212,178,76,0.15);}
+.info-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;}
+.info-icon{width:28px;height:28px;background:rgba(212,178,76,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.info-icon i{font-size:0.65rem;color:var(--gold);}
+.info-text{font-size:0.7rem;color:rgba(255,255,255,0.7);line-height:1.4;}
+.info-label{font-size:0.6rem;color:rgba(212,178,76,0.7);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:1px;}
+
+.sidebar-section-title{font-family:'Montserrat',sans-serif;font-size:0.65rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;padding:16px 24px 8px;opacity:0.8;}
+
+.skill-tag{display:inline-block;background:rgba(212,178,76,0.1);border:1px solid rgba(212,178,76,0.2);color:rgba(255,255,255,0.75);font-size:0.6rem;padding:3px 8px;border-radius:4px;margin:2px;transition:var(--transition);}
+.skill-tag:hover{background:rgba(212,178,76,0.2);color:var(--gold);}
+.skills-wrap{padding:0 20px;}
+
+.lang-item{display:flex;align-items:center;gap:8px;padding:4px 24px;}
+.lang-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.lang-text{font-size:0.72rem;color:rgba(255,255,255,0.75);}
+
+.sidebar-socials{padding:16px 24px;display:flex;gap:8px;flex-wrap:wrap;}
+.social-btn{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.05);border:1px solid rgba(212,178,76,0.2);color:rgba(255,255,255,0.6);font-size:0.72rem;text-decoration:none;transition:var(--transition);}
+.social-btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);transform:translateY(-2px);}
+
+.dark-toggle-side{padding:0 24px 20px;}
+.dark-toggle{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(212,178,76,0.2);border-radius:8px;padding:8px 12px;cursor:pointer;width:100%;color:rgba(255,255,255,0.6);font-size:0.72rem;transition:var(--transition);}
+.dark-toggle:hover{background:rgba(212,178,76,0.1);color:var(--gold);}
+.toggle-slider{width:28px;height:15px;background:rgba(212,178,76,0.3);border-radius:8px;margin-left:auto;position:relative;transition:background 0.3s;}
+.toggle-knob{width:11px;height:11px;background:var(--white);border-radius:50%;position:absolute;top:2px;left:2px;transition:transform 0.3s;}
+.dark-mode .toggle-slider{background:var(--gold);}
+.dark-mode .toggle-knob{transform:translateX(13px);}
+
+/* ===== MAIN CONTENT ===== */
+#main{margin-left:var(--sidebar-w);min-height:100vh;transition:margin-left 0.4s cubic-bezier(0.4,0,0.2,1);}
+
+/* ===== TOP NAV ===== */
+#topnav{position:fixed;top:0;left:var(--sidebar-w);right:0;z-index:99;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,178,76,0.15);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;transition:left 0.4s cubic-bezier(0.4,0,0.2,1),background 0.3s;box-sizing:border-box;width:calc(100% - var(--sidebar-w));}
+.topnav-title{font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;color:var(--navy);letter-spacing:2px;text-transform:uppercase;}
+.topnav-title span{color:var(--gold);}
+.topnav-actions{display:flex;gap:8px;align-items:center;}
+.btn-primary{background:var(--navy);color:var(--white);border:none;padding:8px 20px;border-radius:8px;font-size:0.75rem;font-weight:600;cursor:pointer;transition:var(--transition);font-family:'Poppins',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:6px;letter-spacing:0.3px;}
+.btn-primary:hover{background:var(--gold);color:var(--navy);transform:translateY(-1px);}
+.btn-gold{background:var(--gold);color:var(--navy);border:none;padding:8px 20px;border-radius:8px;font-size:0.75rem;font-weight:700;cursor:pointer;transition:var(--transition);font-family:'Poppins',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:6px;letter-spacing:0.3px;}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 16px rgba(212,178,76,0.4);}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;border-radius:6px;color:var(--navy);}
+
+/* ===== SECTIONS ===== */
+section{padding:80px 56px 60px;}
+section:first-child{padding-top:100px;}
+.section-label{font-size:0.65rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:3px;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.section-label::after{content:'';height:1px;width:40px;background:var(--gold);}
+.section-title{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:var(--navy);line-height:1.1;margin-bottom:12px;}
+.section-subtitle{color:var(--gray-text);font-size:0.88rem;max-width:520px;line-height:1.6;margin-bottom:40px;}
+
+/* ===== HERO ===== */
+#hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 45%,#1a3350 100%);display:flex;align-items:center;padding:80px 56px 60px;position:relative;overflow:hidden;}
+.hero-bg-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(212,178,76,0.5) 39px,rgba(212,178,76,0.5) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(212,178,76,0.5) 39px,rgba(212,178,76,0.5) 40px);}
+.hero-geo{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border:1px solid rgba(212,178,76,0.08);border-radius:50%;animation:pulse 6s ease-in-out infinite;}
+.hero-geo2{position:absolute;right:-40px;top:-40px;width:360px;height:360px;border:1px solid rgba(212,178,76,0.12);border-radius:50%;animation:pulse 6s ease-in-out infinite 1s;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.04);}}
+
+.hero-content{position:relative;z-index:2;max-width:680px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,178,76,0.12);border:1px solid rgba(212,178,76,0.3);border-radius:20px;padding:6px 16px;font-size:0.7rem;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;}
+.hero-badge i{font-size:0.6rem;}
+.hero-name{font-family:'Montserrat',sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:8px;letter-spacing:-0.5px;}
+.hero-name span{color:var(--gold);}
+.hero-role{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:500;color:rgba(255,255,255,0.7);margin-bottom:24px;letter-spacing:0.5px;}
+.typing-wrap{display:flex;align-items:center;gap:10px;margin-bottom:32px;}
+.typing-prefix{font-size:0.85rem;color:rgba(255,255,255,0.5);}
+#typing-text{font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:700;color:var(--gold);border-right:2px solid var(--gold);padding-right:4px;min-width:200px;}
+.hero-stats{display:flex;gap:32px;margin-bottom:40px;flex-wrap:wrap;}
+.stat-item{text-align:center;}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:var(--gold);line-height:1;}
+.stat-label{font-size:0.65rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px;margin-top:2px;}
+.hero-divider{width:1px;height:40px;background:rgba(212,178,76,0.2);align-self:center;}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;}
+
+/* ===== ABOUT ===== */
+#about{background:var(--white);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.about-card{background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:16px;padding:32px;position:relative;overflow:hidden;}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+.about-text{font-size:0.88rem;line-height:1.8;color:var(--gray-text);margin-bottom:16px;}
+.about-highlight{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);padding:16px;background:rgba(212,178,76,0.08);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;margin:16px 0;line-height:1.5;}
+.awards-list{list-style:none;}
+.awards-list li{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--gray-mid);font-size:0.82rem;color:var(--dark-text);}
+.awards-list li:last-child{border:none;}
+.award-icon{width:28px;height:28px;border-radius:6px;background:rgba(212,178,76,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:0.7rem;flex-shrink:0;}
+
+/* ===== EXPERIENCE ===== */
+#experience{background:var(--gray-light);}
+.timeline{position:relative;padding-left:32px;}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold) 0%,rgba(212,178,76,0.1) 100%);}
+.timeline-item{position:relative;margin-bottom:40px;}
+.timeline-dot{position:absolute;left:-39px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--white);box-shadow:0 0 0 3px rgba(212,178,76,0.3);}
+.timeline-card{background:var(--white);border-radius:16px;border:1px solid rgba(212,178,76,0.15);padding:28px;transition:var(--transition);cursor:pointer;position:relative;overflow:hidden;}
+.timeline-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:transform 0.35s ease;}
+.timeline-card:hover{transform:translateX(6px);box-shadow:0 12px 40px rgba(11,28,44,0.12);}
+.timeline-card:hover::before{transform:scaleY(1);}
+.tc-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px;}
+.tc-year{background:var(--navy);color:var(--gold);font-family:'Montserrat',sans-serif;font-size:0.65rem;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:1px;white-space:nowrap;}
+.tc-company{font-size:0.75rem;color:var(--gold);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;}
+.tc-role{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:12px;}
+.tc-desc{font-size:0.82rem;line-height:1.7;color:var(--gray-text);}
+.tc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
+.tc-tag{font-size:0.62rem;padding:3px 10px;border-radius:20px;background:rgba(11,28,44,0.06);color:var(--navy);font-weight:600;letter-spacing:0.3px;}
+
+/* ===== SKILLS ===== */
+#skills{background:var(--white);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.skill-card{background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:12px;padding:20px;transition:var(--transition);}
+.skill-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,28,44,0.08);}
+.skill-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.skill-name{font-family:'Poppins',sans-serif;font-size:0.82rem;font-weight:600;color:var(--navy);}
+.skill-pct{font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:800;color:var(--gold);}
+.skill-bar-bg{height:6px;background:var(--gray-mid);border-radius:3px;overflow:hidden;}
+.skill-bar-fill{height:100%;background:linear-gradient(90deg,var(--navy),var(--gold));border-radius:3px;width:0;transition:width 1.2s cubic-bezier(0.4,0,0.2,1);}
+.skill-icon{font-size:1.2rem;color:var(--gold);margin-bottom:10px;}
+
+/* ===== CERTIFICATIONS ===== */
+#certifications{background:var(--gray-light);}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;}
+.cert-card{background:var(--white);border:1px solid var(--gray-mid);border-radius:16px;padding:24px;text-align:center;transition:var(--transition);position:relative;overflow:hidden;}
+.cert-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease;}
+.cert-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(11,28,44,0.12);}
+.cert-card:hover::after{transform:scaleX(1);}
+.cert-icon-wrap{width:60px;height:60px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 8px 20px rgba(11,28,44,0.2);}
+.cert-icon-wrap i{font-size:1.4rem;color:var(--gold);}
+.cert-name{font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.3;}
+.cert-body{font-size:0.72rem;color:var(--gray-text);line-height:1.5;}
+.cert-badge{display:inline-block;background:rgba(212,178,76,0.1);border:1px solid rgba(212,178,76,0.3);color:var(--gold);font-size:0.6rem;font-weight:700;padding:2px 10px;border-radius:12px;margin-top:10px;text-transform:uppercase;letter-spacing:1px;}
+
+/* ===== PORTFOLIO ===== */
+#portfolio{background:var(--white);}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;}
+.portfolio-card{background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:16px;padding:28px;transition:var(--transition);cursor:pointer;position:relative;overflow:hidden;}
+.portfolio-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--navy),var(--navy-light));opacity:0;transition:opacity 0.35s ease;}
+.portfolio-card:hover::before{opacity:0.96;}
+.portfolio-card:hover .pc-title,.portfolio-card:hover .pc-desc,.portfolio-card:hover .pc-icon{color:var(--white);}
+.portfolio-card:hover .pc-icon{color:var(--gold);}
+.pc-icon{font-size:1.8rem;color:var(--gold);margin-bottom:16px;transition:color 0.35s;}
+.pc-title{font-family:'Montserrat',sans-serif;font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:8px;transition:color 0.35s;position:relative;z-index:1;}
+.pc-desc{font-size:0.78rem;color:var(--gray-text);line-height:1.6;transition:color 0.35s;position:relative;z-index:1;}
+.pc-icon{position:relative;z-index:1;}
+
+/* ===== STATS ===== */
+#stats{background:var(--navy);padding:60px 56px;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;}
+.stat-card{text-align:center;}
+.stat-number{font-family:'Montserrat',sans-serif;font-size:2.8rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;}
+.stat-title{font-size:0.75rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1.5px;line-height:1.4;}
+.stat-divider{width:30px;height:2px;background:rgba(212,178,76,0.3);margin:10px auto 0;}
+
+/* ===== QUOTES ===== */
+#quotes{background:var(--gray-light);padding:60px 56px;overflow:hidden;}
+.quotes-slider{position:relative;}
+.quote-item{display:none;text-align:center;animation:fadeIn 0.5s ease;}
+.quote-item.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.quote-text{font-family:'Poppins',sans-serif;font-size:1.15rem;font-weight:500;color:var(--navy);line-height:1.7;max-width:600px;margin:0 auto 16px;}
+.quote-text::before{content:'\201C';font-size:2rem;color:var(--gold);font-family:'Montserrat',sans-serif;line-height:0;vertical-align:-0.4em;margin-right:4px;}
+.quote-text::after{content:'\201D';font-size:2rem;color:var(--gold);font-family:'Montserrat',sans-serif;line-height:0;vertical-align:-0.4em;margin-left:4px;}
+.quote-author{font-size:0.75rem;color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;}
+.quote-dots{display:flex;justify-content:center;gap:6px;margin-top:20px;}
+.qdot{width:6px;height:6px;border-radius:50%;background:var(--gray-mid);cursor:pointer;transition:background 0.3s;}
+.qdot.active{background:var(--gold);}
+
+/* ===== CONTACT ===== */
+#contact{background:var(--white);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+.contact-info{display:flex;flex-direction:column;gap:16px;}
+.contact-card{background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:12px;padding:20px;display:flex;align-items:center;gap:16px;text-decoration:none;transition:var(--transition);}
+.contact-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,28,44,0.1);}
+.contact-card-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.ci-navy{background:var(--navy);color:var(--gold);}
+.ci-green{background:#25D366;color:var(--white);}
+.ci-blue{background:#0A66C2;color:var(--white);}
+.ci-red{background:#EA4335;color:var(--white);}
+.ci-gold{background:var(--gold);color:var(--navy);}
+.contact-card-text{flex:1;}
+.cc-label{font-size:0.65rem;color:var(--gray-text);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+.cc-value{font-family:'Poppins',sans-serif;font-size:0.82rem;font-weight:600;color:var(--navy);}
+
+.contact-form{background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:16px;padding:32px;}
+.form-title{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:20px;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:0.72rem;font-weight:600;color:var(--navy);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:10px 14px;border:1.5px solid var(--gray-mid);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--dark-text);background:var(--white);transition:border-color 0.3s;}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-submit{width:100%;padding:12px;background:var(--navy);color:var(--white);border:none;border-radius:8px;font-family:'Poppins',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;transition:var(--transition);letter-spacing:0.5px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.form-submit:hover{background:var(--gold);color:var(--navy);}
+#form-msg{margin-top:10px;font-size:0.78rem;text-align:center;padding:8px;border-radius:6px;display:none;}
+.form-msg-success{background:rgba(34,197,94,0.1);color:#16a34a;display:block!important;}
+
+/* ===== FOOTER ===== */
+#footer{background:var(--navy);padding:48px 56px 24px;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-brand{font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:900;color:var(--white);margin-bottom:10px;}
+.footer-brand span{color:var(--gold);}
+.footer-tagline{font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:16px;}
+.footer-heading{font-family:'Montserrat',sans-serif;font-size:0.7rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:8px;}
+.footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.3s;cursor:pointer;}
+.footer-links a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.35);}
+.scroll-top{width:36px;height:36px;background:rgba(212,178,76,0.1);border:1px solid rgba(212,178,76,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold);cursor:pointer;transition:var(--transition);}
+.scroll-top:hover{background:var(--gold);color:var(--navy);}
+
+/* ===== TRAINING TOPICS ===== */
+.training-card{background:var(--white);border:1px solid var(--gray-mid);border-radius:12px;padding:18px 16px;display:flex;align-items:flex-start;gap:12px;transition:var(--transition);position:relative;overflow:hidden;}
+.training-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:transform 0.3s ease;}
+.training-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,28,44,0.1);border-color:rgba(212,178,76,0.3);}
+.training-card:hover::after{transform:scaleY(1);}
+.training-icon{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--navy),var(--navy-light));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.training-icon i{font-size:0.85rem;color:var(--gold);}
+.training-name{font-family:'Poppins',sans-serif;font-size:0.8rem;font-weight:600;color:var(--navy);line-height:1.4;margin-bottom:3px;}
+.training-cat{font-size:0.63rem;color:var(--gray-text);text-transform:uppercase;letter-spacing:0.8px;}
+
+/* ===== DARK MODE ===== */
+body.dark-mode{--white:#121f2e;--gray-light:#0f1b28;--gray-mid:#1e3048;--dark-text:#e8edf2;--gray-text:#8ba0b4;}
+body.dark-mode #topnav{background:rgba(15,27,40,0.92);border-bottom-color:rgba(212,178,76,0.1);}
+body.dark-mode .topnav-title{color:var(--white);}
+body.dark-mode .timeline-card{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode .about-card{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode .contact-form{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode .cert-card{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode .contact-card{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode .portfolio-card{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode .skill-card{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode .form-group input,.dark-mode .form-group textarea{background:#091524;border-color:#1e3048;color:var(--dark-text);}
+body.dark-mode .training-card{background:#0f1b28;border-color:#1e3048;}
+body.dark-mode #about{background:#091524;}
+body.dark-mode #skills{background:#091524;}
+body.dark-mode #portfolio{background:#091524;}
+body.dark-mode #contact{background:#091524;}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  :root{--sidebar-w:0px;}
+  #sidebar{transform:translateX(-280px);width:280px;}
+  #sidebar.open{transform:translateX(0);}
+  #main{margin-left:0;}
+  #topnav{left:0;right:0;width:100%;padding:0 12px 0 8px;}
+  .menu-toggle{display:flex;align-items:center;justify-content:center;}
+  section{padding:80px 20px 48px;}
+  #hero{padding:100px 20px 60px;min-height:auto;overflow:hidden;}
+  .about-grid,.contact-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
+  .footer-top{grid-template-columns:1fr;}
+  .section-title{font-size:1.5rem;}
+  #stats{padding:48px 20px;}
+  #quotes{padding:48px 20px;}
+  #footer{padding:40px 20px 20px;}
+  .form-row{grid-template-columns:1fr;}
+  .hero-stats{gap:16px;}
+  .topnav-title{font-size:0.65rem;letter-spacing:1px;}
+  .topnav-actions .btn-primary{display:none;}
+  .btn-gold{padding:7px 12px;font-size:0.7rem;}
+  .overlay{display:block;}
+}
+@media(max-width:600px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .cert-grid{grid-template-columns:repeat(2,1fr);}
+  .skills-grid{grid-template-columns:1fr;}
+  .portfolio-grid{grid-template-columns:1fr;}
+  #topnav{padding:0 10px 0 6px;}
+  .topnav-title{font-size:0.6rem;letter-spacing:0.5px;}
+  .btn-gold{padding:6px 10px;font-size:0.68rem;}
+}
+
+/* Overlay for mobile sidebar */
+#overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:99;}
+#overlay.show{display:block;}
+
+/* AOS overrides */
+[data-aos]{opacity:0;transition-property:opacity,transform!important;}
+[data-aos].aos-animate{opacity:1;}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">BHANU<span> P</span></div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<aside id="sidebar">
+  <div class="sidebar-top">
+    <div class="profile-ring">
+      <div class="profile-img">
+        <div class="profile-initials">BP</div>
+      </div>
+    </div>
+    <div class="sidebar-name">Bhanu Pratap Singh</div>
+    <div class="sidebar-title">Senior EHS Executive<br>Govt. Registered Paramedic</div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <a class="nav-link active" onclick="scrollTo('hero')"><i class="fas fa-home"></i> Home</a>
+      <a class="nav-link" onclick="scrollTo('about')"><i class="fas fa-user"></i> About</a>
+      <a class="nav-link" onclick="scrollTo('experience')"><i class="fas fa-briefcase"></i> Experience</a>
+      <a class="nav-link" onclick="scrollTo('skills')"><i class="fas fa-tools"></i> Skills</a>
+      <a class="nav-link" onclick="scrollTo('certifications')"><i class="fas fa-certificate"></i> Certifications</a>
+      <a class="nav-link" onclick="scrollTo('portfolio')"><i class="fas fa-shield-alt"></i> Portfolio</a>
+      <a class="nav-link" onclick="scrollTo('training')"><i class="fas fa-chalkboard-teacher"></i> Trainings</a>
+      <a class="nav-link" onclick="scrollTo('stats')"><i class="fas fa-chart-bar"></i> Stats</a>
+      <a class="nav-link" onclick="scrollTo('contact')"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+  </nav>
+
+  <div class="sidebar-info">
+    <div class="info-item">
+      <div class="info-icon"><i class="fas fa-phone"></i></div>
+      <div class="info-text">
+        <div class="info-label">Phone</div>
+        +91 7006631292
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon"><i class="fas fa-envelope"></i></div>
+      <div class="info-text">
+        <div class="info-label">Email</div>
+        Bhanu9232@gmail.com
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <div class="info-text">
+        <div class="info-label">Location</div>
+        Ward No. 13, Samba, J&K 184121
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-section-title">Expertise</div>
+  <div class="skills-wrap">
+    <span class="skill-tag">LOTO</span>
+    <span class="skill-tag">PTW</span>
+    <span class="skill-tag">HAZOP</span>
+    <span class="skill-tag">ERT Lead</span>
+    <span class="skill-tag">Fire Safety</span>
+    <span class="skill-tag">Fleet Safety</span>
+    <span class="skill-tag">BBS</span>
+    <span class="skill-tag">OHC Ops</span>
+    <span class="skill-tag">MS Office</span>
+    <span class="skill-tag">WordPress</span>
+  </div>
+
+  <div class="sidebar-section-title">Languages</div>
+  <div class="lang-item"><div class="lang-dot"></div><div class="lang-text">Hindi</div></div>
+  <div class="lang-item"><div class="lang-dot"></div><div class="lang-text">English</div></div>
+
+  <div class="sidebar-socials">
+    <a href="tel:+917006631292" class="social-btn" title="Call"><i class="fas fa-phone"></i></a>
+    <a href="mailto:Bhanu9232@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/917006631292" target="_blank" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/bhanu-pratap-singh-ehs" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+  <div class="dark-toggle-side">
+    <button class="dark-toggle" onclick="toggleDark()">
+      <i class="fas fa-moon" id="dark-icon"></i>
+      <span id="dark-label">Dark Mode</span>
+      <div class="toggle-slider"><div class="toggle-knob"></div></div>
+    </button>
+  </div>
+</aside>
+
+<!-- TOP NAV -->
+<nav id="topnav">
+  <button class="menu-toggle" onclick="toggleSidebar()">
+    <i class="fas fa-bars" style="font-size:1.1rem;color:var(--navy);" id="menuIcon"></i>
+  </button>
+  <div class="topnav-title">Bhanu Pratap <span>Singh</span></div>
+  <div class="topnav-actions">
+    <a href="#" class="btn-primary" onclick="downloadCV()"><i class="fas fa-download"></i> Resume</a>
+    <a href="tel:+917006631292" class="btn-gold"><i class="fas fa-phone"></i> Call Now</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-geo"></div>
+    <div class="hero-geo2"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down" data-aos-duration="600">
+        <i class="fas fa-shield-alt"></i> Senior EHS Executive • J&K India
+      </div>
+      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+        Bhanu<br><span>Pratap Singh</span>
+      </h1>
+      <div class="hero-role" data-aos="fade-up" data-aos-delay="200">Senior EHS Executive & Govt. Registered Paramedic</div>
+      <div class="typing-wrap" data-aos="fade-up" data-aos-delay="300">
+        <span class="typing-prefix">I am a</span>
+        <span id="typing-text"></span>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-item">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Companies</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Major Incidents</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+      </div>
+      <div class="hero-btns" data-aos="fade-up" data-aos-delay="500">
+        <button class="btn-gold" onclick="downloadCV()"><i class="fas fa-download"></i> Download CV</button>
+        <a href="tel:+917006631292" class="btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="mailto:Bhanu9232@gmail.com" class="btn-primary"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://wa.me/917006631292" target="_blank" class="btn-primary" style="background:#25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://linkedin.com" target="_blank" class="btn-primary" style="background:#0A66C2;"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Professional Overview</h2>
+    <p class="section-subtitle">A decade of dedication to industrial safety, emergency response, and occupational health.</p>
+    <div class="about-grid">
+      <div class="about-card" data-aos="fade-right" data-aos-duration="700">
+        <div class="about-highlight">
+          "Safety is not just a job — it's a commitment to every life on site."
+        </div>
+        <p class="about-text">A results-driven EHS professional with 10+ years of hands-on experience across multinational FMCG, agribusiness, and healthcare sectors. Currently serving as <strong>EHS Senior Executive at Dhanuka Agritech Ltd.</strong>, Udhampur, J&K, building digital safety platforms to strengthen safety culture.</p>
+        <p class="about-text">Govt. Registered Paramedic with 3.5 years of medical qualification, bringing a unique dual-expertise in both industrial safety management and emergency medical response. Multiple-time Employee of the Month award winner and contributor to the 1st Place Animated CTA Presentation Award at Coca-Cola India.</p>
+        <ul class="awards-list">
+          <li><div class="award-icon"><i class="fas fa-trophy"></i></div> Multiple Employee of the Month Awards</li>
+          <li><div class="award-icon"><i class="fas fa-medal"></i></div> 1st Place – Animated CTA Presentation, Coca-Cola India SWA</li>
+          <li><div class="award-icon"><i class="fas fa-id-card"></i></div> J&K Govt. Registered Paramedic & Certified Advance First Aider</li>
+        </ul>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="700">
+        <div class="about-card" style="margin-bottom:20px;">
+          <div class="section-label" style="margin-bottom:8px;">Education</div>
+          <ul class="awards-list">
+            <li><div class="award-icon"><i class="fas fa-graduation-cap"></i></div><div><strong>10th</strong> – Science, Maths, Social, English, Hindi</div></li>
+            <li><div class="award-icon"><i class="fas fa-graduation-cap"></i></div><div><strong>12th</strong> – Physics, Chemistry, Bio, Data Science, English</div></li>
+            <li><div class="award-icon"><i class="fas fa-laptop"></i></div><div><strong>Master Diploma</strong> – Computer Information & System Management</div></li>
+            <li><div class="award-icon"><i class="fas fa-fire-extinguisher"></i></div><div><strong>Diploma</strong> – Fire Engineering & Safety Management (1 Yr)</div></li>
+            <li><div class="award-icon"><i class="fas fa-stethoscope"></i></div><div><strong>M.P.H.W & G.N.M</strong> – J&K Govt. Medical Council (3.5 Yrs)</div></li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <div class="section-label" style="margin-bottom:8px;">Current Role</div>
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px;">
+            <div style="width:44px;height:44px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-leaf" style="color:var(--gold);"></i></div>
+            <div><div style="font-size:0.7rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">2026 – Present</div><div style="font-family:'Montserrat',sans-serif;font-size:0.95rem;font-weight:700;color:var(--navy);">Dhanuka Agritech Ltd.</div></div>
+          </div>
+          <p class="about-text" style="margin-bottom:0;">EHS Senior Executive – Udhampur, J&K. Building digital platforms, leading ERT, LOTO, PTW, Aspect Impact, Fleet Safety, and BBS reporting systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Career Journey</div>
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-subtitle">A progressive track record across safety, healthcare, and compliance domains.</p>
+    <div class="timeline">
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-duration="600">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div>
+              <div class="tc-company">Dhanuka Agritech Ltd., Udhampur J&K</div>
+              <div class="tc-role">EHS Senior Executive</div>
+            </div>
+            <div class="tc-year">2026 – Present</div>
+          </div>
+          <div class="tc-desc">Senior EHS Executive with expertise in building digital platforms to strengthen safety culture through UC/UA and BBS reporting. Skilled in compliance management, LOTO, PTW, OHC operations, ERT Lead, Fleet Safety, Aspect Impact, firefighting, trainings, and TBTs.</div>
+          <div class="tc-tags"><span class="tc-tag">ERT Lead</span><span class="tc-tag">LOTO</span><span class="tc-tag">PTW</span><span class="tc-tag">BBS Reporting</span><span class="tc-tag">Fleet Safety</span><span class="tc-tag">Digital Safety Platforms</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div>
+              <div class="tc-company">NJ Food Products – Coca-Cola Bottling Partner, Samba J&K</div>
+              <div class="tc-role">Occupational Health & Safety Officer</div>
+            </div>
+            <div class="tc-year">2024 – 2026</div>
+          </div>
+          <div class="tc-desc">Safety professional skilled in LOTO, MSDS, PTW, HAZOP & HOPP, ERT, Fleet Safety, Contractor & Visitor Safety, OHC operations, firefighting, trainings, and TBTs. Multiple-time Employee of the Month award winner and contributor to the 1st Place Animated CTA Presentation Award at Coca-Cola India South West Asia.</div>
+          <div class="tc-tags"><span class="tc-tag">LOTO</span><span class="tc-tag">MSDS</span><span class="tc-tag">HAZOP</span><span class="tc-tag">HOPP</span><span class="tc-tag">ERT</span><span class="tc-tag">FMCG Compliance</span><span class="tc-tag">OHC</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div>
+              <div class="tc-company">Berger Paints India Ltd. – IGC Phase 1, Samba J&K</div>
+              <div class="tc-role">Occupational Health & Safety Coordinator</div>
+            </div>
+            <div class="tc-year">2016 – 2024</div>
+          </div>
+          <div class="tc-desc">With 8 years of experience as Health and Safety Coordinator at Berger Paints India Ltd.'s Occupational Health Center, ensured workplace safety, managed medical emergencies, and implemented health initiatives. Expertise helped reduce occupational hazards, promoting a healthy work environment for employees.</div>
+          <div class="tc-tags"><span class="tc-tag">OHC Management</span><span class="tc-tag">Medical Emergency</span><span class="tc-tag">Health Initiatives</span><span class="tc-tag">Hazard Reduction</span><span class="tc-tag">8 Years Tenure</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div>
+              <div class="tc-company">Government District Hospital, Samba</div>
+              <div class="tc-role">Paramedic</div>
+            </div>
+            <div class="tc-year">2015 – 2016</div>
+          </div>
+          <div class="tc-desc">Gained experience in Emergency Ward, Ambulance Services, Maternal and Child Health, and Operation Theater. Developed skills in patient care, teamwork, and communication, building a strong foundation for healthcare and emergency response.</div>
+          <div class="tc-tags"><span class="tc-tag">Emergency Ward</span><span class="tc-tag">Ambulance Services</span><span class="tc-tag">Maternal Health</span><span class="tc-tag">Operation Theater</span><span class="tc-tag">Patient Care</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">Technical Expertise</div>
+    <h2 class="section-title">Skills & Proficiency</h2>
+    <p class="section-subtitle">Core competencies built across a decade of field and administrative safety experience.</p>
+    <div class="skills-grid" id="skillsGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Certifications & Qualifications</h2>
+    <p class="section-subtitle">Formal recognition of professional expertise and commitment to excellence.</p>
+    <div class="cert-grid">
+      <div class="cert-card" data-aos="zoom-in" data-aos-duration="500">
+        <div class="cert-icon-wrap"><i class="fas fa-fire-extinguisher"></i></div>
+        <div class="cert-name">Diploma in Fire Engineering & Safety Management</div>
+        <div class="cert-body">Professional qualification in fire safety systems, hazard control, and emergency management.</div>
+        <span class="cert-badge">Certified</span>
+      </div>
+      <div class="cert-card" data-aos="zoom-in" data-aos-delay="80" data-aos-duration="500">
+        <div class="cert-icon-wrap"><i class="fas fa-heartbeat"></i></div>
+        <div class="cert-name">G.N.M – General Nursing & Midwifery</div>
+        <div class="cert-body">J&K Govt. Medical Council. Comprehensive nursing and patient care qualification.</div>
+        <span class="cert-badge">Govt. Registered</span>
+      </div>
+      <div class="cert-card" data-aos="zoom-in" data-aos-delay="160" data-aos-duration="500">
+        <div class="cert-icon-wrap"><i class="fas fa-stethoscope"></i></div>
+        <div class="cert-name">M.P.H.W – Multi-Purpose Health Worker</div>
+        <div class="cert-body">J&K Govt. Medical Council. Community healthcare and preventive medicine specialist.</div>
+        <span class="cert-badge">Govt. Registered</span>
+      </div>
+      <div class="cert-card" data-aos="zoom-in" data-aos-delay="240" data-aos-duration="500">
+        <div class="cert-icon-wrap"><i class="fas fa-first-aid"></i></div>
+        <div class="cert-name">Certified Advanced First Aider</div>
+        <div class="cert-body">Advanced certification in first aid, trauma response, and emergency life support.</div>
+        <span class="cert-badge">Certified</span>
+      </div>
+      <div class="cert-card" data-aos="zoom-in" data-aos-delay="320" data-aos-duration="500">
+        <div class="cert-icon-wrap"><i class="fas fa-id-badge"></i></div>
+        <div class="cert-name">J&K Govt. Registered Paramedic</div>
+        <div class="cert-body">Officially registered paramedic with J&K Government Medical Council, authorized for emergency medical practice.</div>
+        <span class="cert-badge">Govt. Registered</span>
+      </div>
+      <div class="cert-card" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="500">
+        <div class="cert-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+        <div class="cert-name">Master Diploma – Computer Information & System Management</div>
+        <div class="cert-body">Advanced diploma in IT systems, web applications, and digital management tools.</div>
+        <span class="cert-badge">Diploma</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="section-label">Safety Work</div>
+    <h2 class="section-title">Safety Portfolio</h2>
+    <p class="section-subtitle">Key initiatives, programs, and systems implemented across organizations.</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-card" data-aos="fade-up" data-aos-duration="500">
+        <div class="pc-icon"><i class="fas fa-users"></i></div>
+        <div class="pc-title">BBS Reporting Systems</div>
+        <div class="pc-desc">Designed and deployed digital Behavior-Based Safety reporting platforms at Dhanuka Agritech, strengthening frontline safety culture through UC/UA tracking.</div>
+      </div>
+      <div class="portfolio-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="500">
+        <div class="pc-icon"><i class="fas fa-clipboard-check"></i></div>
+        <div class="pc-title">Safety Training Programs</div>
+        <div class="pc-desc">Conducted 100+ safety trainings and toolbox talks (TBTs) covering LOTO, PTW, fire safety, chemical handling, and emergency response procedures.</div>
+      </div>
+      <div class="portfolio-card" data-aos="fade-up" data-aos-delay="160" data-aos-duration="500">
+        <div class="pc-icon"><i class="fas fa-fire"></i></div>
+        <div class="pc-title">Emergency Response Drills</div>
+        <div class="pc-desc">Led ERT operations and mock emergency drills at Coca-Cola and Dhanuka facilities, ensuring workforce readiness for fire, chemical spill, and medical emergencies.</div>
+      </div>
+      <div class="portfolio-card" data-aos="fade-up" data-aos-delay="240" data-aos-duration="500">
+        <div class="pc-icon"><i class="fas fa-tasks"></i></div>
+        <div class="pc-title">HAZOP & Compliance Systems</div>
+        <div class="pc-desc">Implemented HAZOP, Aspect Impact assessments, and multinational FMCG compliance frameworks ensuring zero regulatory violations.</div>
+      </div>
+      <div class="portfolio-card" data-aos="fade-up" data-aos-delay="320" data-aos-duration="500">
+        <div class="pc-icon"><i class="fas fa-desktop"></i></div>
+        <div class="pc-title">Digital Safety Platforms</div>
+        <div class="pc-desc">Built web-based safety management dashboards, digital permit-to-work systems, and observation reporting portals using modern web technologies.</div>
+      </div>
+      <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="500">
+        <div class="pc-icon"><i class="fas fa-hospital"></i></div>
+        <div class="pc-title">OHC Operations & Medical Camps</div>
+        <div class="pc-desc">Managed Occupational Health Center at Berger Paints for 8 years, conducting health camps, medical surveillance, and first-aid emergency response for 500+ employees.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING TOPICS -->
+  <section id="training" style="background:var(--gray-light);">
+    <div class="section-label">Safety Education</div>
+    <h2 class="section-title">Training Topics Delivered</h2>
+    <p class="section-subtitle">Over <strong style="color:var(--navy);">2,000+ Man-Days</strong> of structured safety and medical training across industrial and healthcare settings.</p>
+    <div id="trainingGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;"></div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="stats-grid">
+      <div class="stat-card" data-aos="fade-up" data-aos-duration="600">
+        <div class="stat-number" data-target="10">0</div>
+        <div class="stat-divider"></div>
+        <div class="stat-title">Years of EHS<br>Experience</div>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+        <div class="stat-number" data-target="500">0</div>
+        <div class="stat-divider"></div>
+        <div class="stat-title">Employees<br>Protected Daily</div>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+        <div class="stat-number" data-target="2000">0</div>
+        <div class="stat-divider"></div>
+        <div class="stat-title">Man-Days of<br>Training Delivered</div>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+        <div class="stat-number" data-target="4">0</div>
+        <div class="stat-divider"></div>
+        <div class="stat-title">Organizations<br>Served</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTES -->
+  <section id="quotes">
+    <div class="section-label" style="justify-content:center;">Safety Philosophy</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:32px;">Words That Drive Action</h2>
+    <div class="quotes-slider">
+      <div class="quote-item active">
+        <div class="quote-text">Safety is not a priority that can be traded off against other objectives — it must be a value embedded in every decision we make.</div>
+        <div class="quote-author">— Bhanu Pratap Singh, EHS Executive</div>
+      </div>
+      <div class="quote-item">
+        <div class="quote-text">The goal of zero incidents is achievable — it requires awareness, commitment, and a culture where every worker feels responsible for each other's safety.</div>
+        <div class="quote-author">— Safety Leadership Principle</div>
+      </div>
+      <div class="quote-item">
+        <div class="quote-text">Emergency response is not just about reacting — it's about being so well prepared that emergencies rarely become disasters.</div>
+        <div class="quote-author">— Emergency Response Philosophy</div>
+      </div>
+      <div class="quote-item">
+        <div class="quote-text">Digital tools amplify safety culture, but the human commitment to protecting life remains at the core of everything we do.</div>
+        <div class="quote-author">— Bhanu Pratap Singh</div>
+      </div>
+    </div>
+    <div class="quote-dots" id="quoteDots"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-subtitle">Available for professional collaborations, safety consultations, and career opportunities.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a href="tel:+917006631292" class="contact-card" data-aos="fade-right" data-aos-delay="0">
+          <div class="contact-card-icon ci-navy"><i class="fas fa-phone"></i></div>
+          <div class="contact-card-text">
+            <div class="cc-label">Direct Call</div>
+            <div class="cc-value">+91 7006631292</div>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gold);font-size:0.7rem;"></i>
+        </a>
+        <a href="mailto:Bhanu9232@gmail.com" class="contact-card" data-aos="fade-right" data-aos-delay="80">
+          <div class="contact-card-icon ci-red"><i class="fas fa-envelope"></i></div>
+          <div class="contact-card-text">
+            <div class="cc-label">Email</div>
+            <div class="cc-value">Bhanu9232@gmail.com</div>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gold);font-size:0.7rem;"></i>
+        </a>
+        <a href="https://wa.me/917006631292" target="_blank" class="contact-card" data-aos="fade-right" data-aos-delay="160">
+          <div class="contact-card-icon ci-green"><i class="fab fa-whatsapp"></i></div>
+          <div class="contact-card-text">
+            <div class="cc-label">WhatsApp</div>
+            <div class="cc-value">+91 7006631292</div>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gold);font-size:0.7rem;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/bhanu-pratap-singh-ehs" target="_blank" class="contact-card" data-aos="fade-right" data-aos-delay="240">
+          <div class="contact-card-icon ci-blue"><i class="fab fa-linkedin-in"></i></div>
+          <div class="contact-card-text">
+            <div class="cc-label">LinkedIn</div>
+            <div class="cc-value">linkedin.com/in/bhanu-pratap-singh-ehs</div>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gold);font-size:0.7rem;"></i>
+        </a>
+        <a href="#" onclick="downloadCV()" class="contact-card" data-aos="fade-right" data-aos-delay="320">
+          <div class="contact-card-icon ci-gold"><i class="fas fa-download"></i></div>
+          <div class="contact-card-text">
+            <div class="cc-label">Resume</div>
+            <div class="cc-value">Download CV (PDF)</div>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gold);font-size:0.7rem;"></i>
+        </a>
+        <div class="contact-card" style="background:var(--navy);border-color:var(--navy);">
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.6);line-height:1.5;">
+            <i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:6px;"></i>
+            Ward No. 13, Samba, Jammu & Kashmir – 184121
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form" data-aos="fade-left" data-aos-duration="700">
+        <div class="form-title"><i class="fas fa-paper-plane" style="color:var(--gold);margin-right:8px;"></i>Send a Message</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="f-name" placeholder="Full Name"/>
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" id="f-email" placeholder="email@example.com"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" id="f-subject" placeholder="Purpose of contact"/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="f-message" placeholder="Write your message here..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleForm()">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div id="form-msg"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Bhanu<span> Pratap Singh</span></div>
+        <div class="footer-tagline">Senior EHS Executive & Govt. Registered Paramedic. Dedicated to building safer workplaces across Jammu & Kashmir and beyond.</div>
+        <div class="sidebar-socials" style="padding:0;margin-top:12px;">
+          <a href="tel:+917006631292" class="social-btn"><i class="fas fa-phone"></i></a>
+          <a href="mailto:Bhanu9232@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/917006631292" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a onclick="scrollTo('hero')">Home</a></li>
+          <li><a onclick="scrollTo('about')">About</a></li>
+          <li><a onclick="scrollTo('experience')">Experience</a></li>
+          <li><a onclick="scrollTo('skills')">Skills</a></li>
+          <li><a onclick="scrollTo('certifications')">Certifications</a></li>
+          <li><a onclick="scrollTo('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Expertise</div>
+        <ul class="footer-links">
+          <li><a>LOTO & PTW Systems</a></li>
+          <li><a>HAZOP & Fire Safety</a></li>
+          <li><a>Emergency Response</a></li>
+          <li><a>Fleet Safety Management</a></li>
+          <li><a>OHC Operations</a></li>
+          <li><a>Digital Safety Platforms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Bhanu Pratap Singh. All Rights Reserved.</div>
+      <div onclick="scrollTo('hero')" class="scroll-top" title="Back to top"><i class="fas fa-chevron-up" style="font-size:0.7rem;"></i></div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+// ===== LOADER =====
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById('loader').classList.add('hide');
+    AOS.init({once:true,offset:60,duration:600});
+    startTyping();
+    initQuotes();
+    initSkills();
+    initCounters();
+    initTraining();
+    updateActiveNav();
+  },1900);
+});
+
+// ===== SIDEBAR =====
+let sidebarOpen=false;
+function toggleSidebar(){
+  sidebarOpen=!sidebarOpen;
+  document.getElementById('sidebar').classList.toggle('open',sidebarOpen);
+  document.getElementById('overlay').classList.toggle('show',sidebarOpen);
+  document.getElementById('menuIcon').className=sidebarOpen?'fas fa-times':'fas fa-bars';
+}
+function closeSidebar(){
+  sidebarOpen=false;
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+  document.getElementById('menuIcon').className='fas fa-bars';
+}
+
+// ===== SCROLL =====
+function scrollTo(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  if(sidebarOpen)closeSidebar();
+}
+
+// ===== ACTIVE NAV =====
+function updateActiveNav(){
+  const sections=['hero','about','experience','skills','certifications','portfolio','training','stats','contact'];
+  const links=document.querySelectorAll('.nav-link');
+  window.addEventListener('scroll',()=>{
+    let current='hero';
+    sections.forEach(s=>{
+      const el=document.getElementById(s);
+      if(el&&window.scrollY>=el.offsetTop-120)current=s;
+    });
+    links.forEach((l,i)=>{
+      l.classList.toggle('active',i===sections.indexOf(current));
+    });
+  });
+}
+
+// ===== TYPING =====
+const phrases=['EHS Professional','Safety Leader','Emergency Response Specialist','Occupational Health Expert','Certified Paramedic'];
+let pi=0,ci=0,del=false;
+function startTyping(){
+  const el=document.getElementById('typing-text');
+  function tick(){
+    const phrase=phrases[pi];
+    if(!del){
+      el.textContent=phrase.substring(0,ci+1);
+      ci++;
+      if(ci===phrase.length){del=true;setTimeout(tick,1800);return;}
+    } else {
+      el.textContent=phrase.substring(0,ci-1);
+      ci--;
+      if(ci===0){del=false;pi=(pi+1)%phrases.length;}
+    }
+    setTimeout(tick,del?60:90);
+  }
+  tick();
+}
+
+// ===== SKILLS =====
+const skills=[
+  {name:'LOTO Systems',pct:95,icon:'fa-lock'},
+  {name:'PTW Management',pct:92,icon:'fa-file-signature'},
+  {name:'HAZOP Analysis',pct:88,icon:'fa-search'},
+  {name:'Fire Safety',pct:94,icon:'fa-fire-extinguisher'},
+  {name:'Emergency Response',pct:96,icon:'fa-ambulance'},
+  {name:'Fleet Safety',pct:85,icon:'fa-truck'},
+  {name:'OHC Operations',pct:90,icon:'fa-hospital'},
+  {name:'BBS Reporting',pct:88,icon:'fa-clipboard-list'},
+  {name:'MS Office & Zoho',pct:82,icon:'fa-file-excel'},
+  {name:'Web Apps & WordPress',pct:75,icon:'fa-globe'},
+  {name:'FMCG Compliance',pct:87,icon:'fa-check-circle'},
+  {name:'Training & TBTs',pct:93,icon:'fa-chalkboard-teacher'},
+];
+function initSkills(){
+  const grid=document.getElementById('skillsGrid');
+  grid.innerHTML=skills.map((s,i)=>`
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="${i*50}" data-aos-duration="500">
+      <i class="fas ${s.icon} skill-icon"></i>
+      <div class="skill-header">
+        <span class="skill-name">${s.name}</span>
+        <span class="skill-pct">${s.pct}%</span>
+      </div>
+      <div class="skill-bar-bg">
+        <div class="skill-bar-fill" data-pct="${s.pct}"></div>
+      </div>
+    </div>`).join('');
+  AOS.refresh();
+  setTimeout(animateBars,800);
+}
+function animateBars(){
+  document.querySelectorAll('.skill-bar-fill').forEach(b=>{
+    b.style.width=b.dataset.pct+'%';
+  });
+}
+
+// ===== COUNTERS =====
+function initCounters(){
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.stat-number[data-target]').forEach(el=>{
+          const target=+el.dataset.target;
+          let curr=0;
+          const step=Math.ceil(target/50);
+          const timer=setInterval(()=>{
+            curr=Math.min(curr+step,target);
+            el.textContent=curr+(target>=100?'+':'');
+            if(curr>=target)clearInterval(timer);
+          },30);
+        });
+        observer.unobserve(e.target);
+      }
+    });
+  },{threshold:0.3});
+  const statsEl=document.getElementById('stats');
+  if(statsEl)observer.observe(statsEl);
+}
+
+// ===== QUOTES =====
+let qIdx=0,qTimer;
+function initQuotes(){
+  const items=document.querySelectorAll('.quote-item');
+  const dotsEl=document.getElementById('quoteDots');
+  items.forEach((_,i)=>{
+    const d=document.createElement('div');
+    d.className='qdot'+(i===0?' active':'');
+    d.onclick=()=>goQuote(i);
+    dotsEl.appendChild(d);
+  });
+  qTimer=setInterval(()=>goQuote((qIdx+1)%items.length),4500);
+}
+function goQuote(idx){
+  document.querySelectorAll('.quote-item').forEach((el,i)=>el.classList.toggle('active',i===idx));
+  document.querySelectorAll('.qdot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  qIdx=idx;
+}
+
+// ===== DARK MODE =====
+function toggleDark(){
+  document.body.classList.toggle('dark-mode');
+  const isDark=document.body.classList.contains('dark-mode');
+  document.getElementById('dark-icon').className=isDark?'fas fa-sun':'fas fa-moon';
+  document.getElementById('dark-label').textContent=isDark?'Light Mode':'Dark Mode';
+}
+
+// ===== TRAINING TOPICS =====
+const trainings=[
+  {name:'CPR – Cardiopulmonary Resuscitation',cat:'Medical Emergency',icon:'fa-heartbeat'},
+  {name:'Choking & Airway Obstruction',cat:'Medical Emergency',icon:'fa-lungs'},
+  {name:'Acute Bleeding Management',cat:'Medical Emergency',icon:'fa-tint'},
+  {name:'Amputation & Traumatic Injury',cat:'Medical Emergency',icon:'fa-hand-paper'},
+  {name:'Snake Bite First Aid',cat:'Medical Emergency',icon:'fa-biohazard'},
+  {name:'Advanced First Aid',cat:'Medical Emergency',icon:'fa-first-aid'},
+  {name:'Fire Fighting Techniques',cat:'Fire Safety',icon:'fa-fire-extinguisher'},
+  {name:'Fire Drills & Evacuation',cat:'Fire Safety',icon:'fa-bell'},
+  {name:'Fire Risk Assessment',cat:'Fire Safety',icon:'fa-search'},
+  {name:'Mock Drills & Emergency Response',cat:'Emergency Preparedness',icon:'fa-exclamation-triangle'},
+  {name:'Environmental Aspect & Impact',cat:'Environment',icon:'fa-leaf'},
+  {name:'Waste Management & Disposal',cat:'Environment',icon:'fa-recycle'},
+  {name:'BBS – Behavior Based Safety',cat:'Safety Culture',icon:'fa-users'},
+  {name:'Unsafe Acts & Conditions (UA/UC)',cat:'Safety Culture',icon:'fa-eye'},
+  {name:'DDT – Daily Safety Talk',cat:'Safety Culture',icon:'fa-comments'},
+  {name:'Toolbox Talks (TBT)',cat:'Safety Culture',icon:'fa-toolbox'},
+  {name:'LOTO – Lockout Tagout',cat:'Industrial Safety',icon:'fa-lock'},
+  {name:'PTW – Permit to Work',cat:'Industrial Safety',icon:'fa-file-signature'},
+  {name:'HAZOP Analysis',cat:'Industrial Safety',icon:'fa-project-diagram'},
+  {name:'Chemical Handling & MSDS',cat:'Industrial Safety',icon:'fa-flask'},
+  {name:'PPE Usage & Inspection',cat:'Industrial Safety',icon:'fa-hard-hat'},
+  {name:'Working at Height',cat:'Industrial Safety',icon:'fa-level-up-alt'},
+  {name:'Confined Space Entry',cat:'Industrial Safety',icon:'fa-circle-notch'},
+  {name:'Fleet & Road Safety',cat:'Transport Safety',icon:'fa-truck'},
+  {name:'Ergonomics & Manual Handling',cat:'Occupational Health',icon:'fa-user-injured'},
+  {name:'OHC & Occupational Health',cat:'Occupational Health',icon:'fa-hospital'},
+  {name:'Heat Stress & Dehydration',cat:'Occupational Health',icon:'fa-thermometer-half'},
+  {name:'FMCG Compliance & Hygiene',cat:'Compliance',icon:'fa-check-circle'},
+];
+function initTraining(){
+  const grid=document.getElementById('trainingGrid');
+  grid.innerHTML=trainings.map((t,i)=>`
+    <div class="training-card" data-aos="fade-up" data-aos-delay="${(i%6)*50}" data-aos-duration="450">
+      <div class="training-icon"><i class="fas ${t.icon}"></i></div>
+      <div>
+        <div class="training-name">${t.name}</div>
+        <div class="training-cat">${t.cat}</div>
+      </div>
+    </div>`).join('');
+  AOS.refresh();
+}
+
+// ===== DOWNLOAD CV =====
+function downloadCV(){
+  // ✅ TO USE YOUR PDF: Upload your CV PDF to the same folder as index.html
+  // and rename it to: Bhanu_Pratap_Singh_CV.pdf
+  // Then this button will automatically download it.
+  const a=document.createElement('a');
+  a.href='Bhanu_Pratap_Singh_CV.pdf';
+  a.download='Bhanu_Pratap_Singh_CV.pdf';
+  a.target='_blank';
+  a.click();
+}
+
+// ===== CONTACT FORM =====
+function handleForm(){
+  const name=document.getElementById('f-name').value.trim();
+  const email=document.getElementById('f-email').value.trim();
+  const subject=document.getElementById('f-subject').value.trim();
+  const message=document.getElementById('f-message').value.trim();
+  const msg=document.getElementById('form-msg');
+  if(!name||!email||!message){
+    msg.textContent='Please fill in all required fields.';
+    msg.style.cssText='display:block;background:rgba(239,68,68,0.1);color:#dc2626;padding:8px;border-radius:6px;font-size:0.78rem;text-align:center;margin-top:10px;';
+    return;
+  }
+  const mailto=`mailto:Bhanu9232@gmail.com?subject=${encodeURIComponent(subject||'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+  window.location.href=mailto;
+  msg.textContent='Thank you! Opening your email client...';
+  msg.style.cssText='display:block;background:rgba(34,197,94,0.1);color:#16a34a;padding:8px;border-radius:6px;font-size:0.78rem;text-align:center;margin-top:10px;';
+}
+
+// ===== TOPNAV SCROLL =====
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('topnav');
+  if(window.scrollY>40){
+    nav.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';
+  } else {
+    nav.style.boxShadow='none';
+  }
+});
+</script>
+</body>
+</html>
